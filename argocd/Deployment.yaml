@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bulut-bilisim
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bulut-bilisim
+  template:
+    metadata:
+      labels:
+        app: bulut-bilisim
+    spec:
+      containers:
+      - name: bulut-bilisim-kub
+        image: ozgealma/bulutbilisimdevops:v7
+        ports:
+        - containerPort: 8080
