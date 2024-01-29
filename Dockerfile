@@ -2,10 +2,10 @@
 FROM python:3.8-slim-buster
 
 # Çalışma dizinini belirle
-WORKDIR /app
+WORKDIR /uygulama
 
 # Bulunduğumuz dizindeki dosyaları container içine kopyala
-COPY . /app
+COPY . /uygulama
 
 # requirements.txt dosyasındaki gerekli paketleri yükle
 RUN pip install --no-cache-dir -r requirements.txt
@@ -14,5 +14,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 ENV NAME World
 
 EXPOSE 5000
-# Container başlatıldığında uygulama.py dosyasını çalıştır
+# Container başlatıldığında app.py dosyasını çalıştır
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
