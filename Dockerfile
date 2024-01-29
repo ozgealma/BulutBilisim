@@ -1,4 +1,3 @@
-FROM ubuntu:latest
 # İlk olarak bir temel imaj belirle
 FROM python:3.9
 
