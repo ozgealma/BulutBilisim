@@ -2,10 +2,10 @@
 FROM python:3.8-slim-buster
 
 # Çalışma dizinini belirle
-WORKDIR /uygulama
+WORKDIR /uygulama.py
 
 # Bulunduğumuz dizindeki dosyaları container içine kopyala
-COPY . /uygulama
+COPY . /uygulama.py
 
 # requirements.txt dosyasındaki gerekli paketleri yükle
 RUN pip install --no-cache-dir -r requirements.txt
